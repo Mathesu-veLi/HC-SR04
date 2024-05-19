@@ -1,7 +1,7 @@
 #include <Arduino.h>
-#include <veli_ultrasonic.h>
+#include <HC_SR04.h>
 
-veli_ultrasonic::veli_ultrasonic(int pinTrigger, int pinEcho) {
+HC_SR04::HC_SR04(int pinTrigger, int pinEcho) {
   this -> pinTrigger = pinTrigger;
   this -> pinEcho = pinEcho;
 
@@ -9,7 +9,7 @@ veli_ultrasonic::veli_ultrasonic(int pinTrigger, int pinEcho) {
   pinMode(pinEcho, INPUT);
 }
 
-double veli_ultrasonic::cm_distance() {
+double HC_SR04::cm_distance() {
   digitalWrite(pinTrigger, LOW);
   delayMicroseconds(2);
   digitalWrite(pinTrigger, HIGH);
@@ -24,7 +24,7 @@ double veli_ultrasonic::cm_distance() {
   return -1.0;
 }
 
-double veli_ultrasonic::m_distance() {
+double HC_SR04::m_distance() {
   double cm_distance = this.cm_distance();
 
   if (cm_distance != -1.0) {
