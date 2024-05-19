@@ -1,0 +1,8 @@
+# Class Keyword
+HC_SR04 KEYWORD1
+
+# Method to calculate distance in cm
+cm_distance KEYWORD2
+
+# Method to calculate distance in m
+m_distance KEYWORD3
