@@ -25,7 +25,7 @@ double HC_SR04::cm_distance() {
 }
 
 double HC_SR04::m_distance() {
-  double cm_distance = this.cm_distance();
+  double cm_distance = this -> cm_distance();
 
   if (cm_distance != -1.0) {
     return cm_distance / 100.0;
