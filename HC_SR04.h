@@ -1,5 +1,5 @@
-#ifndef HC_SR04
-#define HC_SR04
+#ifndef HC_SR04_H_INCLUDED
+#define HC_SR04_H_INCLUDED
 
 class HC_SR04 {
   private: 
